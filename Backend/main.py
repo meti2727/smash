@@ -1,34 +1,13 @@
-workout_backend/
-│
-├── app/
-│   ├── main.py
-│
-│   ├── core/
-│   │   ├── config.py
-│   │   ├── security.py
-│
-│   ├── db/
-│   │   ├── database.py
-│   │   ├── session.py
-│
-│   ├── models/
-│   │   ├── user.py
-│
-│   ├── schemas/
-│   │   ├── user.py
-│
-│   ├── routes/
-│   │   ├── auth.py
-│
-│   ├── services/
-│   │   ├── auth_service.py
-│
-│   ├── utils/
-│   │   ├── hash.py
-│   │   ├── jwt.py
-│
-│
-├── requirements.txt
-├── .env
-├── alembic/
-└── README.md
+from fastapi import FastAPI
+from app.db.base import Base
+from app.db.database import engine
+from app.models.user import User
+
+app =FastAPI()
+
+Base.metadata.create_all(bind=engine)
+
+
+@app.get("/")
+def home():
+    return {"message": "Hello World"}
