@@ -4,10 +4,7 @@ from sqlalchemy.orm import sessionmaker
 from dotenv import load_dotenv
 import os
 
-
 from sqlalchemy.orm import session
-
-
 
 load_dotenv()
 
