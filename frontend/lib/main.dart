@@ -68,8 +68,10 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
 
-      body: Image.asset('assets/images/story.jpg'),
-        
+      body:Image.asset('assets/images/bg.jpg',
+       height: double.infinity,
+       fit: BoxFit.cover,
+        ),
 
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,

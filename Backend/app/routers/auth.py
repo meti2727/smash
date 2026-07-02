@@ -14,9 +14,8 @@ router = APIRouter(
 
 @router.post("/signup")
 
-def signup(user:UserCreate, db: Session= Depends(get_db)):
 
-    existing_user = db.query(User).filter(
+  existing_user = db.query(User).filter(
      User.email == user.email 
     ).first() 
 
