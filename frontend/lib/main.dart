@@ -1,98 +1,139 @@
+// import 'package:flutter/material.dart';
+
+// void main() {
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatelessWidget{
+//    const MyApp({super.key});
+
+//    @override
+//    Widget build (BuildContext context) {
+
+//        return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//        theme:ThemeData(
+//         colorScheme: ColorScheme.fromSeed
+//         (seedColor:Colors.teal,
+//          brightness: Brightness.dark)
+//         ) ,
+       
+//        home: Scaffold(
+
+//           appBar: AppBar(
+//           centerTitle: true,
+//           leading: Icon(Icons.login),
+//            title: Text('Flutter Map'),
+       
+//          ),
+
+//          floatingActionButton: Column(
+
+//           mainAxisSize: MainAxisSize.min,
+
+//            children: [
+//              FloatingActionButton(
+//                onPressed: () {},
+//                child : Icon(Icons.add)
+        
+//                ),
+//               SizedBox(
+//                 height: 10.0,
+//               ),
+//             FloatingActionButton(onPressed:  () {},
+//              child: Icon(Icons.add)
+//              ),  
+//            ],
+//          ),
+               
+//          bottomNavigationBar: NavigationBar(
+
+//           destinations: [
+//             NavigationDestination(
+//               icon:Icon(Icons.home) ,
+//               label: 'Home'
+//               ),
+//             NavigationDestination(
+//               icon:Icon(Icons.person) ,
+//               label: 'profile'
+//               ),
+//           ],
+//           //
+//           selectedIndex: 1,),
+//        ),
+//       );
+//    }
+//    }
+
+
+
 import 'package:flutter/material.dart';
+
 
 void main() {
   runApp(const MyApp());
 }
 
-String name = 'matsfdjshd';
-int number = 1;
-double lskdjkf = 1.0;
-List mylist =['skjdjf' , 'adfdsf'];
-Map<String , dynamic> myMap = {'String' :  'string'  , 'String2' :4555}; 
-
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
-
-      debugShowCheckedModeBanner: false ,
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Prace',
       theme: ThemeData(
-        
-        colorScheme: .fromSeed(
-          seedColor: Colors.deepPurple , 
-          brightness: Brightness.dark),
-      ),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.yellow,
 
-
-
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-     
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    
-    return Scaffold(
-
-      appBar: AppBar(
-        
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        
-        title: Text(widget.title),
-      ),
-
-      body:Image.asset('assets/images/bg.jpg',
-       height: double.infinity,
-       fit: BoxFit.cover,
         ),
+      ),
 
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+
+      home:  Scaffold(
+         appBar: AppBar(
+           title: const Text('Flutter practice'),
+           centerTitle: true,
+           leading: Icon(Icons.login),
+         ),
+
+           body:  Image.asset("assets/images/bg.jpg")
+          
+          // Row (
+          //   mainAxisAlignment: MainAxisAlignment.center,
+          //   crossAxisAlignment: CrossAxisAlignment.center,
+          //    children : [
+          //       Text("Name"),
+          //       Text('Agw'),
+          //       Text('Address'),
+          //    ]
+          // )
+          
+          
+    
+          //Column(
+          //   mainAxisAlignment: MainAxisAlignment.center ,
+          //   crossAxisAlignment: CrossAxisAlignment.center, //! why is the column is not centerd horrizontally
+          //   children: [
+          // 
+          //     Text("Name"),
+          //     Text("Age"),
+          //     Text("Address"),
+
+          //   ],
+          // )
+        
+      
+        // Container(
+        //    width: 200,
+        //    height: 100,
+        //    color: Colors.blue,
+        //    padding : EdgeInsets.all(10.0),
+        //    margin: EdgeInsets.all(10.0),
+        //   //  alignment: Alignment.center,   //! whats going on
+        //    child:Center ( child:Text("Hello"),) ,
+        //  )
       ),
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
