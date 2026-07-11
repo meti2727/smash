@@ -86,10 +86,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.yellow,
 
-        ),
+        ), 
       ),
 
-
+ 
       home:  Scaffold(
          appBar: AppBar(
            title: const Text('Flutter practice'),
@@ -97,7 +97,89 @@ class MyApp extends StatelessWidget {
            leading: Icon(Icons.login),
          ),
 
-           body:  Image.asset("assets/images/bg.jpg")
+          body: ListTile(
+            leading:Icon(Icons.person),
+             
+            title:Text("john"),
+
+            subtitle: Text("online"),
+
+            trailing: Icon(Icons.arrow_forward),
+
+          )
+
+          // body: Container (
+          //     child:Row(
+          //     children: [
+          //       SizedBox(width: 20,),
+          //       Icon(Icons.person),
+          //       SizedBox(width: 20,),
+          //       Text("John"),
+          //       Spacer(),
+          //       Icon(Icons.arrow_back)
+          //     ],
+          //   )
+          // )
+    
+         
+          )
+
+          );
+          
+ 
+          
+          // Column(
+          //   children: [
+          //     Text("A"),
+          
+          //    SizedBox(height: 20,),
+
+          //    Text("B" , style: TextStyle(decoration: TextDecoration.underline),),
+          
+          
+          //   ]
+          // )
+
+
+
+          // SizedBox(
+          //   width: 300,
+          //   height:200,
+          //   child:Icon(Icons.home , size:40))
+
+
+
+        // Center(
+        //    child: Stack (
+        //         alignment : Alignment.center,
+                
+        //         children:[
+                
+        //           Container (
+        //             width: 400,
+        //             height:400,
+        //             color: Colors.blue,
+        //           ),
+                 
+        //          Container(
+        //            width: 300,
+        //            height:300,
+        //            color:Colors.red,
+        //          ),
+           
+        //          Container (
+        //             width: 200,
+        //             height:200,
+        //             color:Colors.green,
+        //          )
+             
+        //        ] 
+        //      ),
+        //  ),
+         
+
+
+          // //Image.asset("assets/images/bg.jpg")
           
           // Row (
           //   mainAxisAlignment: MainAxisAlignment.center,
@@ -109,8 +191,7 @@ class MyApp extends StatelessWidget {
           //    ]
           // )
           
-          
-    
+
           //Column(
           //   mainAxisAlignment: MainAxisAlignment.center ,
           //   crossAxisAlignment: CrossAxisAlignment.center, //! why is the column is not centerd horrizontally
@@ -133,7 +214,8 @@ class MyApp extends StatelessWidget {
         //   //  alignment: Alignment.center,   //! whats going on
         //    child:Center ( child:Text("Hello"),) ,
         //  )
-      ),
-    );
+
+  
   }
 }
+
