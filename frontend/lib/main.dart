@@ -74,6 +74,9 @@ void main() {
   runApp(const MyApp());
 }
 
+String? title= 'flutter app';
+
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -90,23 +93,48 @@ class MyApp extends StatelessWidget {
       ),
 
  
-      home:  Scaffold(
-         appBar: AppBar(
-           title: const Text('Flutter practice'),
-           centerTitle: true,
-           leading: Icon(Icons.login),
-         ),
+      home:  MyHome(),
 
-          body: ListTile(
-            leading:Icon(Icons.person),
+
+// floatingActionButton: Column(
+
+//   mainAxisSize: MainAxisSize.min,
+
+//   children: [
+//     FloatingActionButton(
+//            onPressed: (){
+//              print("Button pressed");
+//            },
+//            child:Icon(Icons.add),
+//     ),
+//     SizedBox(
+//       height: 10.0,
+//     ),
+//     FloatingActionButton(
+//       onPressed: ()
+//       {
+//        print("button clicked 2");
+//       },
+//       child: Icon(Icons.add),
+      
+//       )
+//   ],
+// )
+
+
+
+     // DrawerHeader(child: Text('Drawer'),),   --- to prent the lists not be not in a wierdplace 
+
+          //  ListTile(
+          //   leading:Icon(Icons.person),
              
-            title:Text("john"),
+          //   title:Text("john"),
 
-            subtitle: Text("online"),
+          //   subtitle: Text("online"),
 
-            trailing: Icon(Icons.arrow_forward),
+          //   trailing: Icon(Icons.arrow_forward),
 
-          )
+          // )
 
           // body: Container (
           //     child:Row(
@@ -122,9 +150,9 @@ class MyApp extends StatelessWidget {
           // )
     
          
-          )
-
           );
+
+     
           
  
           
@@ -219,3 +247,72 @@ class MyApp extends StatelessWidget {
   }
 }
 
+
+class MyHome extends StatefulWidget
+{
+  const MyHome({super.key});
+
+  @override
+  State <MyHome>  createState() => _MyHomeState();
+}
+
+class _MyHomeState extends State<MyHome> 
+{
+  int currentIndex = 0; 
+ @override  
+ Widget build(BuildContext context)
+ {
+ 
+ 
+  return Scaffold(
+ 
+         appBar: AppBar(
+           title: Text(title!),
+           centerTitle: true,
+ 
+          //? whats an action
+           actions: [  
+             IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {},
+              
+              )
+           ],
+         ),  
+         body: currentIndex == 0 
+         ? Center(child: Text("Home Page")) : currentIndex == 1 
+         ? Center(child: Text("Search Page")) : Center(child: Text("Profile Page")),
+       
+       bottomNavigationBar: NavigationBar(
+//! whats selected index
+         
+
+            destinations: const[
+               NavigationDestination(
+
+                icon: Icon(Icons.home),
+                 label: "Home",
+                 ),
+
+                 NavigationDestination(
+
+                  icon:Icon(Icons.person),
+                  label:"Search"
+                 ),
+
+                NavigationDestination(
+                  icon: Icon(Icons.person), 
+                  label: "Profile",
+                  )
+            ],
+           onDestinationSelected: (int value){
+                 setState((){
+                  currentIndex = value ;  
+            });
+           }
+            
+        ),
+
+  );
+ }
+}
