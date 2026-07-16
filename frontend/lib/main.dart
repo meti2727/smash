@@ -280,8 +280,10 @@ class _MyHomeState extends State<MyHome>
            ],
          ),  
          body: currentIndex == 0 
-         ? Center(child: Text("Home Page")) : currentIndex == 1 
-         ? Center(child: Text("Search Page")) : Center(child: Text("Profile Page")),
+         ? Center(child: Text("Home Page")) :
+          currentIndex == 1 
+         ? Center(child: Text("Search Page")) :
+          Center(child: Text("Profile Page")),
        
        bottomNavigationBar: NavigationBar(
 //! whats selected index
