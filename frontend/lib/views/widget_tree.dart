@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:smash/views/pages/home_page.dart';
+import 'package:smash/views/pages/profile_page.dart';
 
 import '../widgets/navbar_widget.dart';
+
+List<Widget> pages = [
+   HomePage(),
+   ProfilePage(),
+];
 
 
 class WidgetTree extends StatelessWidget {
@@ -14,7 +21,7 @@ class WidgetTree extends StatelessWidget {
         title: Text('Futter Mapp'),
         centerTitle: true
        ),
-       
+       body: pages.elementAt(0),
        bottomNavigationBar: NavbarWidget()
 
        

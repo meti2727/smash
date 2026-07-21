@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smash/views/widget_tree.dart';
 import 'package:smash/widgets/navbar_widget.dart';
 
 
@@ -31,18 +32,7 @@ class  _MyAppState extends State <MyApp> {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal)),
 
-       home: Scaffold
-       (
-        appBar: AppBar(
-        title: Text('Futter Mapp'),
-        centerTitle: true
-       ),
-       
-       bottomNavigationBar: NavbarWidget()
-
-       
-       ) 
-
+       home: WidgetTree()
     );
   }
 }
