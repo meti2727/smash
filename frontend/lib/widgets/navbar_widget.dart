@@ -26,8 +26,9 @@ class _NavbarWidgetState extends State<NavbarWidget> {
           setState(() {
              selectedIndex = value;
           });
-           selectedIndex = value;
-        }
+  
+        },
+        selectedIndex: selectedIndex,
        );
   }
 }

@@ -9,7 +9,6 @@ List<Widget> pages = [
    ProfilePage(),
 ];
 
-
 class WidgetTree extends StatelessWidget {
   const WidgetTree({super.key});
 
@@ -21,7 +20,7 @@ class WidgetTree extends StatelessWidget {
         title: Text('Futter Mapp'),
         centerTitle: true
        ),
-       body: pages.elementAt(0),
+       body: pages.elementAt(1),
        bottomNavigationBar: NavbarWidget()
 
        
